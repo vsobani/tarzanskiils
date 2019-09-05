@@ -13,3 +13,5 @@ users have to pull request from the master and make the changes in their respect
 master and then the master will get updated with the new files.
 
 We have to make sure that the no commits are done with master.
+
+$git branch -f day2  //This will create a branch and select that branch from the origin master
