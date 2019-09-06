@@ -55,13 +55,17 @@ my_weigth=45
 my_eyes="blue"
 my_teeth="white"
 contact=9090909090
+weigth_in_kilo=my_weigth*0.453
 my_address="Bangalore"
-
+height_in_cm=my_height*2.54
 print(f"hi im ",my_name)
 print(f"im {age} years old")
 print(f"he's is {my_height} inches tall")
+print(f"im {height_in_cm} cm tall")
 print(f"he's is {my_weigth} pounds heavy")
+print(f"he's is {weigth_in_kilo} kg heavy")
 print(f"he's got {my_teeth} teeth and {my_eyes} eyes %r, %t %")
 print(f"he's is {my_height} inches tall")
 total=my_weigth+my_height+age
+
 print(f"if i add my age ,height and weight i get {total}")
