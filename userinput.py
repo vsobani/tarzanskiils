@@ -19,5 +19,5 @@ social=int(input("enter the score in social "))
 english=int(input("score in english "))
 hindi=int(input("score in hindi "))
 total_marks=physics_score+biology_score+chemistry_score+english+hindi+social
-average_scored=(total_marks/600)*100
-print(f"{student_navishalme} has scored {average_scored} % in exam")
+average_scored=round((total_marks/600)*100,3)
+print(f"{student_name} has scored {average_scored} % in exam")
