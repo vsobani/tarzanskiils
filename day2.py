@@ -47,3 +47,21 @@ pi=3.142
 volume=4/3*pi*r*r*r
 print(volume)
 
+my_name="vishal"
+last_name="sobani"
+age=25
+my_height=180
+my_weigth=45
+my_eyes="blue"
+my_teeth="white"
+contact=9090909090
+my_address="Bangalore"
+
+print(f"hi im ",my_name)
+print(f"im {age} years old")
+print(f"he's is {my_height} inches tall")
+print(f"he's is {my_weigth} pounds heavy")
+print(f"he's got {my_teeth} teeth and {my_eyes} eyes %r, %t %")
+print(f"he's is {my_height} inches tall")
+total=my_weigth+my_height+age
+print(f"if i add my age ,height and weight i get {total}")

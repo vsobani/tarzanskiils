@@ -20,3 +20,6 @@ Python:
 
 Decimal and fraction module are used to get the accurate value.2
 Syntax Decimal("12.12"),Fraction(2.3)
+
+Python is dynamically typed language which means no need to define data type of a variable while initializing.Decimal
+
