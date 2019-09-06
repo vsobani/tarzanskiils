@@ -1,0 +1,5 @@
+first_name= input("Enter your name :")
+last_name= input("Enter yoyr lastv name : ")
+salary=input("enter your salary :")
+age=input("enter your age :")
+print(f"my name is {first_name} and my salary is {salary}")
