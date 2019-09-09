@@ -45,4 +45,8 @@ while current_line>=1:
         print(current_line*"*")
     current_line=current_line-1
 
-
+""" Break statement"""
+while True:
+    name=input("Enter the name ")
+    if name=="vishal":
+        break
