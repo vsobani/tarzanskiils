@@ -61,3 +61,4 @@ elif take_int >9:
     print("Greater than nine")
 else:
     print("The value should be in integer")
+
