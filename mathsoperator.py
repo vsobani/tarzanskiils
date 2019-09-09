@@ -24,16 +24,20 @@ while True:
 
     choose_operation = input("what operation you want to perform like addition,subtract,multiply,division ")
     if choose_operation == 'addition':
-        print(addition(num1, num2))
+        print(f"Addition of {num1} and {num2} is ",addition(num1, num2))
     elif choose_operation == 'subtract':
-        print(subtract(num1, num2))
+        print(f"Subraction of {num1} and {num2} is ",subtract(num1, num2))
     elif choose_operation == 'multiply':
-        print(multiply(num1, num2))
+        print(f"Multiplication of {num1} and {num2} is ",multiply(num1, num2))
     elif choose_operation == 'division':
-        print(divide(num1, num2))
+        print(f"Division of {num1} and {num2} is ",divide(num1, num2))
     elif choose_operation == 'exit':
         print("Program finished execution")
         break
+    else:
+        print("Please select a valid operation like addition, subtraction, multiplication, division or exit..")
+        continue
+
 
 
 

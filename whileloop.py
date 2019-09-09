@@ -50,3 +50,11 @@ while True:
     name=input("Enter the name ")
     if name=="vishal":
         break
+
+
+
+# number_of_lines=int(input("Enter the number of lines "))
+#
+# while number_of_lines>1:
+#     number_of_char = 2*number_of_lines - 1
+#     start_letter=1
