@@ -9,3 +9,5 @@ if age_input>18:
     print("you have to vote")
 else:
     print("you cant vote")
+
+
