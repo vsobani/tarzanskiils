@@ -12,5 +12,4 @@ def iter_function(input_array):
     print(next(even_obj))
     print(next(even_obj))
 
-
 print(iter_function(input_array))
