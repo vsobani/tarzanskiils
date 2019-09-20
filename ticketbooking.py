@@ -33,12 +33,13 @@ class Movie:
         self.price=price
 
 
-vishl=Customer(12,"vis",ticket=1)
-stranger=Movie("stranger","english",1000)
+vishl=Customer(12,"vishal",ticket=1)
+stranger=Movie("stranger things","english",1000)
 svreen1=Screen("BLR",stranger)
 A12=Seat(12,svreen1)
 
 ticket=Ticket("9.3-pm",100,stranger,A12)
+print(vishl.name)
 print(ticket.price)
 print(ticket.movie.name)
 print(ticket.movie.language)
