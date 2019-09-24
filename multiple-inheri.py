@@ -1,18 +1,25 @@
-# class Calculate_addition:
-#
-#     def addition(self,num1,num2):
-#         return num1+num2
-#
-# class Calculation2:
-#     def Multiplication(self,a,b):
-#         return a*b
-# class Derived(Calculation1,Calculation2):
-#     def Divide(self,a,b):
-#         return a/b
-# d = Derived()
-# print(d.Summation(10,20))
-# print(d.Multiplication(10,20))
-# print(d.Divide(10,20))
+class Calculate_addition:
+
+    def addition(self, num1, num2):
+        return num1+num2
+
+
+class Calculate_Multiplication:
+    def multiplication(self, num1, num2):
+        return num1*num2
+
+
+class Calulate(Calculate_addition,Calculate_Multiplication):
+
+    def divide(self, num1, num2):
+        return num1/num2
+
+
+input_1 = Calulate()
+
+print(input_1.addition(10,20))
+print(input_1.multiplication(10,20))
+print(input_1.divide(10,20))
 
 
 class Teacher:
@@ -44,8 +51,10 @@ class Principle(Teacher, Staff):
         Staff.__init__(self, name, department)
 
 shoaib_khan = Principle("Shoaib Khan", "admin", "Python", 33, "Male")
-
+varun_rathore = Principle("Varun Rathore", "Trainer", "Coding", 25, "Male" )
 print(shoaib_khan.get_staff_details())
+print(varun_rathore.get_staff_details())
+print(varun_rathore.teach_sub())
 
 
 
