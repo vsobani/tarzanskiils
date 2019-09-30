@@ -1,110 +1,68 @@
-class Game:
+class Board:
 
     def __init__(self):
-        self.board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-        self.win = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 4, 8), (2, 4, 6), (0, 3, 6), (1, 4, 7), (2, 5, 8))
-        self.moves_count = 0
+        self.cells = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
+        print("Hello Welcome to TIC TAC TOE game \n")
 
-    def create_board(self):
-        print()
-        print(self.board[0], self.board[1], self.board[2])
-        print(self.board[3], self.board[4], self.board[5])
-        print(self.board[6], self.board[7], self.board[8])
-        print()
-
-
-    def player_1(self):
-        while True:
-            index=input("Enter the index ")
-            if self.board[index] != "X" and self.board[index] != "O":
-                self.board[index] = 'X'
-                self.create_board()
+    def show_cells(self):
+        print("--------------------------------")
+        print("%s|%s|%s" % (self.cells[1], self.cells[2], self.cells[3]))
+        print("-----")
+        print("%s|%s|%s" % (self.cells[4], self.cells[5], self.cells[6]))
+        print("-----")
+        print("%s|%s|%s" % (self.cells[7], self.cells[8], self.cells[9]))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#     def p1(self):
-#             try:
-#                 print("PLAYER X")
-#                 question = int(input("Type where your X should be placed \n"))
-#                 if self.board[question] != "X" and self.board[question] != "O":
-#                     self.board[question] = "X"
-#                     self.create_board()
-#                     self.moves_count += 1
-#                 else:
-#                     print("someone already took that row")
-#                     self.p1()
-#                 self.check_win()
-#             except ValueError:
-#                 print("Write a NUMBER from 0 to 8")
-#                 self.p1()
+# class Player(Board):
 #
-#     def p2(self):
-#         try:
-#             print("PLAYER 0")
-#             question = int(input("Type where your 0 should be placed\n"))
-#             if self.board[question] != "X" and self.board[question] != "O":
-#                 self.board[question] = "O"
-#                 self.create_board()
-#                 self.moves_count += 1
-#             else:
-#                 print("someone already took that row")
-#                 self.p2()
-#             self.check_win()
-#         except:
-#             print("Write a NUMBER from 0 to 8")
-#             self.p2()
-#
-#     def check_win(self):
-#         for a in self.win_conditions:
-#             if self.board[a[0]] == self.board[a[1]] == self.board[a[2]] == "X":
-#                 print("PLAYER X WINS")
-#                 self.play_again()
-#             if self.board[a[0]] == self.board[a[1]] == self.board[a[2]] == "O":
-#                 print("PLAYER O WINS")
-#                 self.play_again()
-#             elif self.moves_count == 9:
-#                 print("A DRAW!")
-#                 exit()
-#
-#     def play(self):
-#         while True:
-#             self.p1()
-#             self.p2()
-#
-#     def run(self):
-#         self.create_board()
-#         self.play()
-#
-#     def play_again(self):
-#         while True:
-#             question = input("Do you want to play again? Type y or n\n")
-#             if question == "y":
-#                 print("GLHF")
-#                 self.board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-#                 self.run()
-#             elif question == "n":
-#                 print("See you next time!")
-#                 quit()
-#             else:
-#                 print("Thats not a valid option")
-#
-# tic = Game()
-# tic.run()
+#     def __init__(self):
+#         if self.cells[player] == 'X':
+#             print("player ")
+#         elif self.cells[player] == 'O':
+
+    def update_cell_no(self, cell_no, player):
+        if self.cells[cell_no] == " ":
+            self.cells[cell_no] = player
+    #
+    # def turn_player(self):
+    #     if self.cells[cell_no] ==
+
+    def win_game(self, player):
+        if self.cells[1] == player and self.cells[2] == player and self.cells[3] == player:
+            return True
+        elif self.cells[4] == player and self.cells[5] == player and self.cells[6] == player:
+            return True
+        elif self.cells[7] == player and self.cells[8] == player and self.cells[9] == player:
+            return True
+        elif self.cells[1] == player and self.cells[4] == player and self.cells[7] == player:
+            return True
+        elif self.cells[2] == player and self.cells[5] == player and self.cells[8] == player:
+            return True
+        elif self.cells[3] == player and self.cells[6] == player and self.cells[9] == player:
+            return True
+        elif self.cells[1] == player and self.cells[5] == player and self.cells[9] == player:
+            return True
+        elif self.cells[3] == player and self.cells[5] == player and self.cells[7] == player:
+            return True
+        else:
+            return False
+
+
+board = Board()
+
+while True:
+
+    board.show_cells()
+
+    player = int(input("\n Select cells from 1-9 to input X or O "))
+    board.update_cell_no(player, "X")
+    # board.turn_player()
+    board.show_cells()
+    if board.win_game("X"):
+        print("X wins ")
+
+    player = int(input("\n Select cells from 1-9 to input X or O "))
+    board.update_cell_no(player, "O")
+    board.show_cells()
+    if board.win_game("O"):
+        print("O wins ")

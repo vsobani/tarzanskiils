@@ -34,3 +34,4 @@ vishal = Candidate("vishal sobani", 10)
 security = Staff("security", 111, "security_dept")
 tarzan = Employee(12, "tarzan", 90909090)
 tarzanskills = Company("tarzanskills", "BLR", tarzan, security)
+
